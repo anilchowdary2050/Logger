@@ -5,7 +5,7 @@ WARNING
 DEBUG
 INFO
 
-In this code I took Circular linked list as a base code  and added this logging API's to it
+In this code I took Hello_world.c  as a base code  and added this logging API's to it
 
 Featurs
 
