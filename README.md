@@ -16,6 +16,18 @@ Featurs
 
 Added a system call to kernel that filter The File log messages of Desired  level to Terminal
 
-By default the Log level is WARNING,if you set the Log level as DEBUG it print all Level  messages ,otherwise only the set Level messages are printed 
-The programmer has the flexibility to print the messages either to terminal or to a file,by default it print Log messages to terminal 
+By default the Log level is DEBUG,if you set the Log level as DEBUG it print all Level  messages ,otherwise only the set Level messages are printed 
+The programmer has the flexibility to print the messages either to terminal or to a file,by default it print Log messages to terminal ,if you didn't specify any filename
+
+
+How to Change the Log Level on the fly  (While the code is running)
+
+to change the log level while the code is running Use the following API in your code
+
+void Handle_LogChange();
+
+This API registers a signal handler  with a signal  number SIGUSR1 ,so if you want to change the level from present to next execute the following command
+kill -SIGUSR1 PID_Number 
+
+here PID_Number is the process id of the process which is using this logger API's
 
